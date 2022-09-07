@@ -61,8 +61,7 @@ python_script: !include_dir_merge_list ./config/pyscript/
 remote: !include ./config/remote.yaml
 rest_command: !include_dir_merge_list ./config/rest_commands
 sensor: !include_dir_merge_list ./config/sensors
-shell_command: #!include_dir_merge_list ./config/shell_commands
-  pushupdates_to_github: /bin/bash pushupdates.sh
+shell_command: !include_dir_merge_list ./config/shell_commands
 sun:
 switch: !include_dir_merge_list ./config/switches
 weather: !include ./config/weather.yaml
