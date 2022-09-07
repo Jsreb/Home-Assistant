@@ -1,0 +1,15 @@
+- platform: template
+  sensors:
+    greeting:
+      friendly_name: "Greeting"
+      value_template: >-
+        {% set time = now().hour %}
+        {% if (time >= 18) %}
+          Good Evening, Joe!
+        {% elif (18 >= time >= 12) %}
+          Good Afternoon, Joe!
+        {% elif (12 >= time >= 5) %}
+          Good Morning, Joe!
+        {% else %}
+          Hello, Joe!
+        {% endif %}
