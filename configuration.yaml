@@ -1,0 +1,68 @@
+#  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ██╗   ██╗██████╗  █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+# ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██║   ██║██╔══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+# ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗██║   ██║██████╔╝███████║   ██║   ██║██║   ██║██╔██╗ ██║
+# ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║██║   ██║██╔══██╗██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+# ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝╚██████╔╝██║  ██║██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+# ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+
+########################################
+########## Core Configuration ##########
+########################################
+config:
+discovery: !include ./core/discovery.yaml
+frontend:
+  themes: !include ./core/themes/themes.yaml
+homeassistant_alerts:
+homeassistant:
+  customize: !include ./core/customize.yaml
+http: !include ./core/http.yaml
+mobile_app:
+ssdp:
+system_health:
+tts: !include ./core/tts.yaml
+zeroconf:
+
+########################################
+################ Inputs ################
+########################################
+input_boolean: !include ./config/inputs/input_boolean.yaml
+input_datetime: !include ./config/inputs/input_datetime.yaml
+input_number: !include ./config/inputs/input_number.yaml
+input_select: !include ./config/inputs/input_select.yaml
+
+########################################
+########## Logging & History ###########
+########################################
+device_tracker: !include_dir_merge_list ./config/log/device_trackers
+history: !include ./core/history.yaml
+logger: !include ./config/log/logger.yaml
+#recorder: !include ./config/log/recorder.yaml
+
+########################################
+############ Managed Via UI ############
+########################################
+automation: !include_dir_merge_list ./config/automations
+person: 
+script: !include_dir_merge_named ./config/scripts
+
+########################################
+################ Other #################
+########################################
+api:
+binary_sensor: !include_dir_merge_list ./config/binary_sensors
+emulated_roku: !include ./config/emulated_roku.yaml
+fan: !include ./config/fan.yaml
+google_assistant: !include ./config/google_assistant.yaml
+group: !include ./config/groups.yaml
+homekit: !include ./config/homekit.yaml
+light: !include ./config/light.yaml
+media_player: !include ./config/media_player.yaml
+python_script: !include_dir_merge_list ./config/pyscript/
+remote: !include ./config/remote.yaml
+rest_command: !include_dir_merge_list ./config/rest_commands
+sensor: !include_dir_merge_list ./config/sensors
+shell_command: #!include_dir_merge_list ./config/shell_commands
+  pushupdates_to_github: /bin/bash pushupdates.sh
+sun:
+switch: !include_dir_merge_list ./config/switches
+weather: !include ./config/weather.yaml
