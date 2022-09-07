@@ -1,0 +1,18 @@
+##########################################
+############### Time 12hr ################
+##########################################
+- platform: template
+  sensors:
+    time_12hr:
+      icon_template: mdi:clock
+      friendly_name_template: >
+        Time, 12hr
+      value_template: >
+        {% set time = states('sensor.time') %}
+        {% set hour = time[:2]|int %}
+        {{ '{:02d}:{}'.format(hour if hour == 12 else hour % 12, time[3:5]) }} {{ 'PM' if hour>11 else 'AM' }}
+      attribute_templates:
+        am_pm: >
+          {% set time = states('sensor.time') %}
+          {% set hour = time[:2]|int %}
+          {{ 'PM' if hour>11 else 'AM' }}
