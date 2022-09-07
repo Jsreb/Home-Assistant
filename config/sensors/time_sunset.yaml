@@ -1,0 +1,10 @@
+##########################################
+################# Sunset #################
+##########################################
+- platform: template
+  sensors:
+    time_sunset:
+      friendly_name: Sunset
+      value_template: >-
+        {% set sunset = as_timestamp(states.sun.sun.attributes.next_setting) %}
+        {{ sunset | timestamp_custom('%I:%M %p')}}
