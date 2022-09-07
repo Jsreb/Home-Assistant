@@ -1,0 +1,101 @@
+### Controls ###
+shield_back:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "BACK"
+shield_center:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "CENTER"
+shield_down:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "DOWN"
+shield_left:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "LEFT"
+shield_home:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "HOME"
+shield_menu:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "MENU"
+shield_right:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "RIGHT"
+shield_sleep:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "SLEEP"
+shield_up:
+  sequence:
+  - service: androidtv.adb_command
+    target:
+      entity_id: media_player.shield
+    data:
+      command: "UP"
+
+### Apps ###
+shield_app_hulu: #doesn't work
+  sequence:
+  - service: media_player.select_source
+    target:
+      entity_id: media_player.shield
+    data:
+      source: "Hulu"
+shield_app_netflix:
+  sequence:
+  - service: media_player.select_source
+    target:
+      entity_id: media_player.shield
+    data:
+      source: "com.netflix.ninja"
+shield_app_plex:
+  sequence:
+  - service: media_player.select_source
+    target:
+      entity_id: media_player.shield
+    data:
+      source: "Plex"
+shield_app_spotify:
+  sequence:
+  - service: media_player.select_source
+    target:
+      entity_id: media_player.shield
+    data:
+      source: "Spotify"
+shield_app_youtube:
+  sequence:
+  - service: media_player.select_source
+    target:
+      entity_id: media_player.shield
+    data:
+      source: "YouTube"
