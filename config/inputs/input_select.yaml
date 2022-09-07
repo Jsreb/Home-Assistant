@@ -1,0 +1,12 @@
+shield_tv:
+  name: Shield TV
+  initial: Home
+  options:
+    - Hulu
+    - Netflix
+    - Plex
+    - Prime TV
+    - Shudder
+    - Spotify
+    - VUDU
+    - YouTube
