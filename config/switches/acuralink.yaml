@@ -1,0 +1,11 @@
+- platform: command_line
+  switches:
+    acura_lock:
+      command_on: python3 "./python_scripts/acuralink_lock.py"
+      command_off: python3 "./python_scripts/acuralink_lock.py"
+    acura_start:
+      command_on: python3 "./python_scripts/acuralink_start.py"
+      command_off: python3 "./python_scripts/acuralink_start.py"
+    acura_stop:
+      command_on: python3 "./python_scripts/acuralink_stop.py"
+      command_off: python3 "./python_scripts/acuralink_stop.py"
