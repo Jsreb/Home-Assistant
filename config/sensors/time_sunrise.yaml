@@ -1,0 +1,10 @@
+##########################################
+################# Sunrise ################
+##########################################
+- platform: template
+  sensors:
+    time_sunrise:
+      friendly_name: Sunrise
+      value_template: >-
+        {% set sunrise = as_timestamp(states.sun.sun.attributes.next_rising) %}
+        {{ sunrise | timestamp_custom('%I:%M %p')}}
