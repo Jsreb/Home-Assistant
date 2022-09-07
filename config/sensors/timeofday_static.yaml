@@ -1,0 +1,22 @@
+##########################################
+######### Time of Day - Static ###########
+##########################################
+- platform: template
+  sensors:
+    time_of_day_static:
+      friendly_name: Static Time of Day
+      value_template: >-
+        {% set time = strptime(states.sensor.time.state,'%H:%M') %}
+        {% set Time = ( time.hour + time.minute / 60 ) %}
+        {% set weekday = states.binary_sensor.workday.state %}
+        {% if (6) < Time < (9) %}
+          Morning
+        {% elif (9) <= Time <= (18) %}
+          Day
+        {% elif (18) < Time < (22) %}
+          Evening
+        {% elif (22) < Time < (24) %}
+          Night
+        {% else %}
+          Late Night
+        {% endif %}
