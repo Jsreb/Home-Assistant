@@ -1,4 +1,4 @@
 1. Go to deCONZ --> Phoscon.  In upper left corner, note the IP address.
 2. Go to \config\.storage\core.config_entries and search fro "ConBee".
 3. Replace the host IP with the one you took note of.
-4. Reboot HA.
+4. Reboot HA. 
