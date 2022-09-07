@@ -64,13 +64,6 @@ shield_up:
       command: "UP"
 
 ### Apps ###
-shield_app_hulu: #doesn't work
-  sequence:
-  - service: media_player.select_source
-    target:
-      entity_id: media_player.shield
-    data:
-      source: "Hulu"
 shield_app_netflix:
   sequence:
   - service: media_player.select_source
