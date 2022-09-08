@@ -3,6 +3,11 @@ bedroom_lights:
   icon: mdi:bed
   initial: true
 
+office_lights:
+  name: Office Light Automation
+  icon: mdi:lightbulb-on
+  initial: true
+
 security:
   name: Security
   icon: mdi:lock
