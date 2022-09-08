@@ -1,1 +1,9 @@
+bedroom_lights:
+  name: Bedroom Lights Automation
+  icon: mdi:bed
+  initial: true
 
+security:
+  name: Security
+  icon: mdi:lock
+  initial: false
