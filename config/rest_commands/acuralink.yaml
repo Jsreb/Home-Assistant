@@ -1,1 +1,2 @@
-# hidden
+acura_lock:
+  url: 'https://autoremotejoaomgcd.appspot.com/sendmessage?key=YourUniqueKey&message=RemoteLock'
