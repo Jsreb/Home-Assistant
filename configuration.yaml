@@ -36,7 +36,6 @@ input_select: !include ./config/inputs/input_select.yaml
 device_tracker: !include_dir_merge_list ./config/log/device_trackers
 history: !include ./core/history.yaml
 logger: !include ./config/log/logger.yaml
-#recorder: !include ./config/log/recorder.yaml
 
 ########################################
 ############ Managed Via UI ############
