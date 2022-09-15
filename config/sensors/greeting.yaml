@@ -14,5 +14,5 @@
         {% elif (12 >= time >= 5) %}
           Good Morning, Joe!
         {% else %}
-          Hello, Joe!
+          Go to sleep, Joe!
         {% endif %}
