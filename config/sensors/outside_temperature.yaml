@@ -1,0 +1,6 @@
+- platform: template
+  sensors:
+    outside_temperature:
+      friendly_name: Outside Temperature
+      value_template: >-
+        {{states['weather.home'].attributes.temperature}}
